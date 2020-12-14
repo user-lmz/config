@@ -1,0 +1,10 @@
+du -sh /var/cache/apt/archives
+sudo apt-get clean
+
+#清理ubuntu菜单栏快捷方式
+cd /usr/share/applications
+sudo rm -rf [需要删除的快捷方式]
+
+开机出现System program problem detected
+sudo rm /var/crash/*
+sudo gedit /etc/default/apport

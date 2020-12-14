@@ -1,0 +1,4 @@
+#mysql config
+use mysql
+select User,Host,plugin from user;
+update user set plugin='caching_sha2_password';

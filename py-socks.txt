@@ -1,0 +1,16 @@
+printenv | grep all_proxy
+unset all_proxy && unset ALL_PROXY
+pip3 install -U pip3
+export all_proxy="https://192.168.56.1:10808/"
+
+https_proxy=http://192.168.0.141:10808
+http_proxy=$https_proxy
+all_proxy=socks5://192.168.0.141:10808
+
+pip3 install 'moudle' -i https://pypi.tuna.tsinghua.edu.cn/simple  #加速下载速度
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple  #自动配置
+pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/ 
+
+unset all_proxy && unset ALL_PROXY
+source ~/.bashrc
+可以解决pip3 install 出现的问题

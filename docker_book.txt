@@ -1,0 +1,4 @@
+$ docker pull ccr.ccs.tencentyun.com/dockerpracticesig/docker_practice
+# 国内仓库
+$ docker run -it --rm -p 4000:80 ccr.ccs.tencentyun.com/dockerpracticesig/docker_practice
+
