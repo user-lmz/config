@@ -1,0 +1,14 @@
+#set oracle jdk environment
+export JAVA_HOME=/usr/lib/jvm/jdk-12.0.2 ## 这里要注意目录要换成自己解压的jdk 目
+录
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+#SET PATH FOR NODEJS
+export NODE_HOME=/opt/node-v14.15.0-linux-x64
+export PATH=$NODE_HOME/bin:$PATH
+
+#SET MAVEN HOME
+export MAVEN_HOME=/usr/local/apache-maven-3.6.3
+export PATH=${MAVEN_HOME}/bin:$PATH
