@@ -1,0 +1,11 @@
+
+#conda 
+conda clean -p      //删除没有用的包
+conda clean -t      //tar打包
+conda clean -y -all //删除所有的安装包及cache
+
+conda update --all
+
+
+ffmpeg -i video.mp4 video.avi
+
