@@ -1,0 +1,2 @@
+#打开anaconda可视化界面
+anaconda-navigator
