@@ -2,3 +2,19 @@
 	sudo add-apt-repository ppa:rock-core/qt4
 	sudo apt update
 	sudo apt install libqtcore4
+
+sudo apt install synaptic  //安装软件包管理器
+
+sudo apt install gnome-tweaks //ubuntu设置字体
+
+#conda 
+conda clean -p      //删除没有用的包
+conda clean -t      //tar打包
+conda clean -y -all //删除所有的安装包及cache
+
+conda update --all
+
+export PATH=/home/lmz/anaconda3/bin:$PATH
+
+
+ffmpeg -i video.mp4 video.avi
