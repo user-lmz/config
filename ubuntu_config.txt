@@ -5,6 +5,16 @@
 
 sudo apt install synaptic  //安装软件包管理器
 
+#vim个性化设置
+sudo vim /etc/vim/vimrc
+set tabstop=4 
+set softtabstop=4 
+set shiftwidth=4 
+set noexpandtab 
+set nu 
+set autoindent 
+set cindent
+
 sudo apt install gnome-tweaks //ubuntu设置字体
 
 #conda 
@@ -20,3 +30,7 @@ conda info --env
 
 
 ffmpeg -i video.mp4 video.avi
+
+sudo apt-get purge google-chrome-stable
+sudo apt-get autoremove
+sudo rm -rf ~/.config/google-chrome

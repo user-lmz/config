@@ -2,3 +2,4 @@ $ docker pull ccr.ccs.tencentyun.com/dockerpracticesig/docker_practice
 # 国内仓库
 $ docker run -it --rm -p 4000:80 ccr.ccs.tencentyun.com/dockerpracticesig/docker_practice
 
+https://v2.ymcb.net/api/v1/client/subscribe?token=11f4c0be3cf4970c5b40c26929ca4ca9
