@@ -3,6 +3,7 @@
 	sudo apt update
 	sudo apt install libqtcore4
 
+sudo apt-get -u dist-upgrade //强制更新软件包到发行版本
 sudo apt install synaptic  //安装软件包管理器
 
 sudo apt-get remove libreoffice-common   //卸载LibreOffice
