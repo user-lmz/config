@@ -70,3 +70,5 @@ mysql> UPDATE user SET host = '%' WHERE user = 'root'; #允许远程访问
 #刷新cache中配置 刷新权限
 mysql>flush privileges; 
 mysql>quit;
+
+

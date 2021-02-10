@@ -1,1 +1,0 @@
-python3 /usr/share/metavision/designer/analytics/samples/metavision_vibration_estimation.py
