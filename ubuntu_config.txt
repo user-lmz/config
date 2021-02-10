@@ -13,8 +13,18 @@ sudo rm -f /usr/share/applications/ubuntu-amazon-default.desktop
 
 ALTER USER 'lmz'@'%' IDENTIFIED WITH mysql_native_password BY '123';   
 
+du -sh /var/cache/apt/archives
+sudo apt-get clean
+
+#清理ubuntu菜单栏快捷方式
+cd /usr/share/applications
+sudo rm -rf [需要删除的快捷方式]
+
+开机出现System program problem detected
+sudo rm /var/crash/*
+sudo gedit /etc/default/apport
+
 #其他软件
- 
 sudo apt-get -y purge thunderbird*
 #邮件
 sudo apt-get -y purge firefox
