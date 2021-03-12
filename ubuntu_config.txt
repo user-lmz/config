@@ -2,6 +2,10 @@
 	sudo add-apt-repository ppa:rock-core/qt4
 	sudo apt update
 	sudo apt install libqtcore4
+	
+#安装vmtools
+sudo apt autoremove open-vm-tools
+sudo apt install open-vm-tools-desktop
 
 sudo apt-get -u dist-upgrade //强制更新软件包到发行版本
 sudo apt install synaptic  //安装软件包管理器
