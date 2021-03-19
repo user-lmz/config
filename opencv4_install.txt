@@ -3,12 +3,12 @@
 	sudo apt install cmake
 
 （2） 安装依赖环境
-	sudo apt-get install build-essential libgtk2.0-dev libavcodec-dev libavformat-dev libjpeg-dev 		libswscale-dev libtiff5-dev
-	sudo apt-get install libgtk2.0-dev
-	sudo apt-get install pkg-config
+	
+	sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv41-dev libxvidcore-dev libx264-dev libatlas-base-dev gfortran libgtk2.0-dev libjpeg-dev libpng-dev pkg-config
 	
 （3）下载opencv
 	官网下载地址：https://opencv.org/releases/
+
 	
 2.安装
 （1）解压文件
@@ -17,12 +17,14 @@
 	在opencv4文件夹下新建build文件夹：mkdir build
 	进入build文件夹下：cd build
 （3）cmake：
-	sudo cmake -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=YES 
-	-D CMAKE_INSTALL_PREFIX=/usr/local ..
+	sudo cmake -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=YES -D CMAKE_INSTALL_PREFIX=/usr/local ..
 	这里cmake命令执行会下载ippicv，需要等待一段时间才能下载完成。
 	-D OPENCV_GENERATE_PKGCONFIG=YES：OpenCV4以上版本默认不使用pkg-config，该编译
 	选项开启生成opencv4.pc文件，支持pkg-config功能。（OpenCV4以下版本不需要该选项）
 	-D CMAKE_INSTALL_PREFIX=/usr/local：指定安装目录。
+	
+	若要额外安装模块opencv_contrib，则命令修改为：
+	sudo cmake -D CMAKE_BUILD_TYPE=Release -D OPENCV_GENERATE_PKGCONFIG=YES -D CMAKE_INSTALL_PREFIX=/usr/local OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules ..
 （4）进行编译
 
 	sudo make
