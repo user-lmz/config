@@ -1,0 +1,2 @@
+#查看yuv
+ffplay -f rawvideo -pix_fmt yuv420p -video_size 4672x3468 IMG20200101150634_4672x3468_before_11_allocate_buff_0.yuv
