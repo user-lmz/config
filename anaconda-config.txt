@@ -1,2 +1,8 @@
 #打开anaconda可视化界面
 anaconda-navigator
+
+#查看所有虚拟环境
+conda env list
+
+#创建Python虚拟环境
+conda create -n py38 python=3.8
