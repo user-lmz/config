@@ -71,7 +71,9 @@ mysql> UPDATE user SET host = '%' WHERE user = 'root'; #允许远程访问
 mysql>flush privileges; 
 mysql>quit;
 
-
+#可视化
+下载DBeaver 
+https://dbeaver.io/
 
 #卸载
 1. 首先在终端中查看MySQL的依赖项：dpkg --list|grep mysql
