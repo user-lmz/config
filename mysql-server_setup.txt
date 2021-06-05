@@ -72,3 +72,20 @@ mysql>flush privileges;
 mysql>quit;
 
 
+
+#卸载
+1. 首先在终端中查看MySQL的依赖项：dpkg --list|grep mysql
+
+2. 卸载： sudo apt-get remove mysql-common
+
+3. 卸载：sudo apt-get autoremove --purge mysql-server-5.7
+
+4. 清除残留数据：dpkg -l|grep ^rc|awk '{print$2}'|sudo xargs dpkg -P
+
+5. 再次查看MySQL的剩余依赖项：dpkg --list|grep mysql
+
+6. 继续删除剩余依赖项，如：sudo apt-get autoremove --purge mysql-apt-config
+
+至此已经没有了MySQL的依赖项，彻底删除，Good Luck
+
+
