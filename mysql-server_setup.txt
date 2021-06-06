@@ -71,7 +71,7 @@ flush privileges;
 
 
 #设置权限与密码
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码'; #使用mysql_native_password修改加密规则
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码'; #使用mysql_native_password修改加密规则, 可以不用加sudo登录mysql
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '密码' PASSWORD EXPIRE NEVER; #更新一下用户的密码
 mysql> UPDATE user SET host = '%' WHERE user = 'root'; #允许远程访问
 
