@@ -1,1 +1,21 @@
 docker rmi $(docker image -a)
+
+#docker设置不需要sudo运行
+1.创建名为docker的组，如果之前已经有该组就会报错，可以忽略这个错误：
+	sudo groupadd docker
+
+2.将当前用户加入组docker：
+	sudo gpasswd -a ${USER} docker
+
+3.重启docker服务(生产环境请慎用)：
+	sudo systemctl restart docker
+
+4.添加访问和执行权限：
+	sudo chmod a+rw /var/run/docker.sock
+
+5.操作完毕，验证一下，现在可以不用带sudo了：
+	willzhao@ideapad:~$ docker images
+	REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+	bolingcavalry/probedemo   0.0.1               803f83e12d88        4 hours ago         508MB
+	hello-world               latest              bf756fb1ae65        5 months ago        13.3kB
+	openjdk                   8u212-jdk-stretch   03b20c1fa768        11 months ago       488MB
