@@ -61,14 +61,41 @@ mysql>select User,authentication_string,Host from user;
 #查看状态
 select host,user,plugin from user;
 
-#设置权限与密码
+#创建新用户并授予权限
+如果出现拒绝访问则运行：
+	grant system_user on *.* to root;
+	
+create user 'lmz'@'*r' identified by '123';
+grant all privileges on *.* to 'lmz'@'%';
+flush privileges;	
 
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码'; #使用mysql_native_password修改加密规则
+
+#设置权限与密码
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '密码'; #使用mysql_native_password修改加密规则, 可以不用加sudo登录mysql
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '密码' PASSWORD EXPIRE NEVER; #更新一下用户的密码
 mysql> UPDATE user SET host = '%' WHERE user = 'root'; #允许远程访问
 
 #刷新cache中配置 刷新权限
 mysql>flush privileges; 
 mysql>quit;
+
+#可视化
+下载DBeaver 
+https://dbeaver.io/
+
+#卸载
+1. 首先在终端中查看MySQL的依赖项：dpkg --list|grep mysql
+
+2. 卸载： sudo apt-get remove mysql-common
+
+3. 卸载：sudo apt-get autoremove --purge mysql-server-5.7
+
+4. 清除残留数据：dpkg -l|grep ^rc|awk '{print$2}'|sudo xargs dpkg -P
+
+5. 再次查看MySQL的剩余依赖项：dpkg --list|grep mysql
+
+6. 继续删除剩余依赖项，如：sudo apt-get autoremove --purge mysql-apt-config
+
+至此已经没有了MySQL的依赖项，彻底删除，Good Luck
 
 
