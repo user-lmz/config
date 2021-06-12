@@ -44,6 +44,7 @@ systemctl status rabbitmq-server   #Active: active (running) 说明处于运行�
 	
 	
 基本操作：
+
 sudo rabbitmqctl # 查看所有命令和帮助文档
 sudo rabbitmqctl stop # 停止服务
 sudo rabbitmqctl status # 查看服务状态
