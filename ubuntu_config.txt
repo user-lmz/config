@@ -4,8 +4,14 @@
 	sudo apt install libqtcore4
 	
 #安装vmtools
-sudo apt autoremove open-vm-tools
-sudo apt install open-vm-tools-desktop
+加载linux.iso安装
+
+#磁盘压缩，释放空间
+//列出当前的挂载点
+sudo vmware-toolbox-cmd disk list
+//对指定挂载点压缩，这里将挂载在/目录下的分区压缩
+sudo vmware-toolbox-cmd disk shrink /
+
 
 sudo apt-get -u dist-upgrade //强制更新软件包到发行版本
 sudo apt install synaptic  //安装软件包管理器
