@@ -13,12 +13,31 @@ sudo apt-get install fcitx-googlepinyin
 sudo apt-get -u dist-upgrade //强制更新软件包到发行版本
 sudo apt install synaptic  //安装软件包管理器
 
+
 sudo apt-get remove libreoffice-common   //卸载LibreOffice
 
 sudo rm -f /usr/share/applications/com.canonical.launcher.amazon.desktop  //删除Amazon广告图标
 sudo rm -f /usr/share/applications/ubuntu-amazon-default.desktop 
 
-ALTER USER 'lmz'@'%' IDENTIFIED WITH mysql_native_password BY '123';   
+#ubuntu18.04开机自动挂载swap分区(该方法已经失效，开机会很慢)
+	blkid /dev/sda6 命令查看交换分区
+	sudo mkswap /dev/sda6
+修改/etc/fstab文件，添加一行
+
+	UUID=947208ba-c306-4ec6-9b01-e9fb32eef9b4 swap swap defaults 0 0
+	
+#增大ubuntu虚拟内存大小
+查看swapfile大小 
+	swapon -s
+关闭swapfile
+	sudo swapoff /swapfile
+设置swapfile大小为16G
+	sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
+设置swap file类型
+	sudo mkswap /swapfile
+启用swapfile
+	sudo swapon /swapfile
+
 
 du -sh /var/cache/apt/archives
 sudo apt-get clean
