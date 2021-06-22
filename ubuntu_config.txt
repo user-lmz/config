@@ -3,9 +3,18 @@
 	sudo apt update
 	sudo apt install libqtcore4
 	
+#系统监视器
+sudo apt install indicator-multiload
+	
 #安装vmtools
 sudo apt autoremove open-vm-tools
 sudo apt install open-vm-tools-desktop
+
+#出现pip install mysqlclient安装失败，需要按照如下安装依赖
+	sudo apt install -y mysql-client
+	sudo apt-get install libmysqlclient-dev
+	sudo apt install libssl-dev
+	sudo apt install libcrypto++-dev
 
 #pinyin
 sudo apt-get install fcitx-googlepinyin
