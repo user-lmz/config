@@ -10,6 +10,11 @@ sudo apt install indicator-multiload
 sudo apt autoremove open-vm-tools
 sudo apt install open-vm-tools-desktop
 
+#ubuntu开启关闭防火墙
+sudo ufw status
+sudo ufw enable  # 开启
+sudo ufw disable   #关闭
+
 #出现pip install mysqlclient安装失败，需要按照如下安装依赖
 	sudo apt install -y mysql-client
 	sudo apt-get install libmysqlclient-dev
