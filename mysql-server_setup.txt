@@ -42,7 +42,7 @@ Reload privilege tables now? (Press y|Y for Yes, any other key for No) : Y (选�
 systemctl status mysql.service
 
 #配置远程访问
-sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf #找到 bind-address 修改值为 0.0.0.0(如果需要远程访问)
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf #找到 bind-address 修改值为 自己的ip(如果需要远程访问)
 sudo /etc/init.d/mysql restart #重启mysql
 
 sudo mysql -uroot -p
