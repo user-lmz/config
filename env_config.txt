@@ -12,3 +12,13 @@ export PATH=$NODE_HOME/bin:$PATH
 #SET MAVEN HOME
 export MAVEN_HOME=/usr/local/apache-maven-3.6.3
 export PATH=${MAVEN_HOME}/bin:$PATH
+
+#SET GRADLE HOME
+export GRADLE_HOME=/home/lmz/tools/Gradle/latest
+export PATH=${GRADLE_HOME}/bin:${PATH}
+
+#SET GOLANG HOME
+export GOPATH=/home/lmz/tools/go
+#export GOROOT=/home/lmz/go
+export PATH=$GOPATH/bin:$PATH
+

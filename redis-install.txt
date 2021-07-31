@@ -10,3 +10,9 @@ wget http://download.redis.io/releases/redis-5.0.5.tar.gz
 运行 redis-server 按ctrl+c停止
 
 redis-cli shutdown 关闭服务
+
+# 安装RDM（redis可视化工具）
+sudo apt update
+sudo apt install snapd
+
+sudo snap install redis-desktop-manager

@@ -3,6 +3,9 @@
 	sudo apt update
 	sudo apt install libqtcore4
 	
+#系统监视器
+sudo apt install indicator-multiload
+	
 #安装vmtools
 加载linux.iso安装
 
@@ -13,18 +16,43 @@ sudo vmware-toolbox-cmd disk list
 sudo vmware-toolbox-cmd disk shrink /
 
 
+#ubuntu开启关闭防火墙
+sudo ufw status
+sudo ufw enable  # 开启
+sudo ufw disable   #关闭
+
+#出现pip install mysqlclient安装失败，需要按照如下安装依赖
+	sudo apt install -y mysql-client
+	sudo apt-get install libmysqlclient-dev
+	sudo apt install libssl-dev
+	sudo apt install libcrypto++-dev
+
 #pinyin
 sudo apt-get install fcitx-googlepinyin
 
 sudo apt-get -u dist-upgrade //强制更新软件包到发行版本
 sudo apt install synaptic  //安装软件包管理器
+sudo apt install bleachbit    //安装清理垃圾软件
+
 
 sudo apt-get remove libreoffice-common   //卸载LibreOffice
 
 sudo rm -f /usr/share/applications/com.canonical.launcher.amazon.desktop  //删除Amazon广告图标
 sudo rm -f /usr/share/applications/ubuntu-amazon-default.desktop 
 
-ALTER USER 'lmz'@'%' IDENTIFIED WITH mysql_native_password BY '123';   
+	
+#增大ubuntu虚拟内存大小
+查看swapfile大小 
+	swapon -s
+关闭swapfile
+	sudo swapoff /swapfile
+设置swapfile大小为16G
+	sudo dd if=/dev/zero of=/swapfile bs=1M count=16384
+设置swap file类型
+	sudo mkswap /swapfile
+启用swapfile
+	sudo swapon /swapfile
+
 
 du -sh /var/cache/apt/archives
 sudo apt-get clean
