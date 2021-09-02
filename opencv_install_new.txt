@@ -30,9 +30,9 @@
 		cd ~/opencv_build/opencv
 		mkdir -p build && cd build
 		
-		使用 CMake 设置 OpenCV 构建：（'/usr/local'为你想安装的目录比如'~/opencv'）
+		使用 CMake 设置 OpenCV 构建：（'CMAKE_INSTALL_PREFIX'为你想安装的目录比如'~/opencv'）
 				cmake -D CMAKE_BUILD_TYPE=RELEASE \
-    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D CMAKE_INSTALL_PREFIX=~/opencv \
     -D INSTALL_C_EXAMPLES=ON \
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D OPENCV_GENERATE_PKGCONFIG=ON \
@@ -76,6 +76,14 @@
 		pkg-config --libs opencv4
 		pkg-config --modversion opencv4(查看版本号)
 		
+		
+		如果不想安装额外模块：
+				cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=~/opencv \
+    -D INSTALL_C_EXAMPLES=ON \
+    -D INSTALL_PYTHON_EXAMPLES=ON \
+    -D OPENCV_GENERATE_PKGCONFIG=ON \
+    -D BUILD_EXAMPLES=ON ..
 	
 	
 	

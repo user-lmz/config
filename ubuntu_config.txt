@@ -6,6 +6,10 @@
 #系统监视器
 sudo apt install indicator-multiload
 	
+#动态库目录：/etc/ld.so.conf
+末尾添加你的动态库路径：/usr/local/lib
+使之生效：sudo ldconfig
+	
 #安装vmtools
 加载linux.iso安装
 
