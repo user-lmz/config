@@ -1,0 +1,9 @@
+视频拆帧
+	ffmpeg -i video.avi frame_%04d.jpg
+视频提取音频文件
+	ffmpeg -i v01.mp4 -vn -acodec copy output.aac
+
+音视频组装
+	ffmpeg -i test.mp4 -i v01.aac -vcodec copy -acodec copy output.mp4
+
+
