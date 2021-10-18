@@ -23,7 +23,7 @@ ffplay -f rawvideo -pix_fmt yuv420p -video_size 4672x3468 IMG20200101150634_4672
 		
 重新编译安装ffmpeg（已安装先卸载）:
 	1）生成 Makefile时，加上x264
-		./configure --prefix=/home/lmz/tools/ffmpeg --enable-libvmaf --enable-gpl --enable-shared --enable-libx26
+		./configure --prefix=/home/lmz/tools/ffmpeg --enable-libvmaf --enable-gpl --enable-shared --enable-libx264 --extra-cflags=-I/home/lmz/tools/x264/include --extra-ldflags=-L/home/lmz/tools/x264/lib
 	
 	2）清理
 		make clean
@@ -60,6 +60,7 @@ ffplay -f rawvideo -pix_fmt yuv420p -video_size 4672x3468 IMG20200101150634_4672
 配置文件追加ffmpeg安装目录下的lib文件夹（以下是我本机的）：
 
 	/home/lmz/tools/ffmpeg/lib/
+	/home/lmz/tools/x264/lib/
 
 使修改生效：
 
