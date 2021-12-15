@@ -1,0 +1,24 @@
+#set oracle jdk environment
+#这里要注意目录要换成自己解压的jdk 目录
+export JAVA_HOME=/usr/lib/jvm/jdk-12.0.2 
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+#SET PATH FOR NODEJS
+export NODE_HOME=/opt/node-v14.15.0-linux-x64
+export PATH=$NODE_HOME/bin:$PATH
+
+#SET MAVEN HOME
+export MAVEN_HOME=/usr/local/apache-maven-3.6.3
+export PATH=${MAVEN_HOME}/bin:$PATH
+
+#SET GRADLE HOME
+export GRADLE_HOME=/home/lmz/tools/Gradle/latest
+export PATH=${GRADLE_HOME}/bin:${PATH}
+
+#SET GOLANG HOME
+export GOPATH=/home/lmz/tools/go
+#export GOROOT=/home/lmz/go
+export PATH=$GOPATH/bin:$PATH
+
