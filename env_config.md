@@ -1,16 +1,11 @@
 #set oracle jdk environment
-#这里要注意目录要换成自己解压的jdk 目录
-export JAVA_HOME=/usr/lib/jvm/jdk-12.0.2 
+export JAVA_HOME=/home/lmz/tools/Java/jdk1.8.0_291
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 
-#SET PATH FOR NODEJS
-export NODE_HOME=/opt/node-v14.15.0-linux-x64
-export PATH=$NODE_HOME/bin:$PATH
-
 #SET MAVEN HOME
-export MAVEN_HOME=/usr/local/apache-maven-3.6.3
+export MAVEN_HOME=/home/lmz/tools/Maven/apache-maven-3.8.1
 export PATH=${MAVEN_HOME}/bin:$PATH
 
 #SET GRADLE HOME
@@ -22,3 +17,12 @@ export GOPATH=/home/lmz/tools/go
 #export GOROOT=/home/lmz/go
 export PATH=$GOPATH/bin:$PATH
 
+#SET FFmpeg HOME
+export FFMPEG_PATH=/home/lmz/tools/ffmpeg
+export CLASSPATH=$FFMPEG_PATH/lib:$CLASSPATH
+PATH=$FFMPEG_PATH/bin:$PATH
+
+#SET NODE HOME
+export NODE_HOME=/home/lmz/tools/npm/node-v16.13.1-linux-x64
+export PATH=$PATH:$NODE_HOME/bin
+export NODE_PATH=$NODE_HOME/lib/node_modules
