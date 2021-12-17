@@ -9,11 +9,10 @@ git rm --f "文件路径"，不仅将该文件从缓存中删除，还会将物�
 git config  credential.helper store 
 打开.git文件夹内的config文件，会发现多了两行
 [credential]
-	helper = store
-	
+    helper = store
+
 #git克隆远程仓库指定分支
 git clone -b <远程分支> <远程仓库地址>
-
 
 #如果一个文件已经add到暂存区，还没有 commit，此时如果不想要这个文件了，有两种方法：
 用版本库内容清空暂存区，git reset HEAD 回退到当前版本（在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100）；
@@ -22,7 +21,7 @@ git clone -b <远程分支> <远程仓库地址>
 #用git add指令将需要提交至仓库的文件从工作区添加到暂存区，告诉Git那些文件需要追踪 
 #也可以用git add 文件名（或子目录）只跟踪单个文件或者子目录 
 git add .
-			
+
 git commit -m "first commit"
 
 #如果git remote -v已经存在，就用git remote rm origin
@@ -53,4 +52,4 @@ ssh-keygen -t rsa -C "mingzeluo888@gmail.com"
 
 #如果上述指令运行成功，那么会在主目录（home）下生成一个.ssh的隐藏文件夹，按ctrl+h可以显示。
 点击进入后可以找到两个文件，分别为：id_rsa和id_rsa.pub。这两个文件对应了私密密钥和公开密钥，
-接下来就是要将公开密钥文件（即id_rsa.pub文件）中的代码复制到github中的“SSH Key”下面
+接下来就是要将公开密钥文件（即id_rsa.pub文件）中的代码复制到github中的“SSH Key”下面S
