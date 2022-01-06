@@ -1,4 +1,4 @@
-#vue add tauri出现错误
+#vue add tauri出现错误（原文链https://www.cnblogs.com/kharvey/p/13741519.html）
     npm ERR! getaddrinfo ENOENT raw.githubusercontent.com
 
 <img title="" src="file:///C:/Users/Administrator/AppData/Roaming/marktext/images/2022-01-06-16-38-45-image.png" alt="" data-align="inline">
