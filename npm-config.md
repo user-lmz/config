@@ -16,6 +16,10 @@
     
     sudo chmod -R 777 /usr/local/bin/npm
 
+#获取软件包路径
+npm config get prefix
+
+
 #换源    
 npm config set registry https://registry.npm.taobao.org
 npm install -g cnpm --registry=https://registry.npm.taobao.org
