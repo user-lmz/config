@@ -1,4 +1,6 @@
 #set oracle jdk environment
+#如果没有jre目录，用如下命令生成
+#bin/jlink.exe --module-path jmods --add-modules java.desktop --output jre
 export JAVA_HOME=/home/lmz/tools/Java/jdk1.8.0_291
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
