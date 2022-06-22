@@ -1,5 +1,25 @@
 docker rmi $(docker image -a)
 
+#docker基本操作
+1.列出所有容器ID
+	docker ps -aq
+
+2.查看所有运行或者不运行容器
+	docker ps -a
+
+3.停止所有的container（容器），这样才能够删除其中的images：
+	docker stop $(docker ps -a -q) 或者 docker stop $(docker ps -aq) 
+
+4.如果想要删除所有container（容器）的话再加一个指令：
+	docker rm $(docker ps -a -q) 或者 docker rm $(docker ps -aq) 
+
+5.查看当前有些什么images
+	docker images
+
+6.删除images（镜像），通过image的id来指定删除谁
+	docker rmi <image id>
+
+
 #docker设置不需要sudo运行
 1.创建名为docker的组，如果之前已经有该组就会报错，可以忽略这个错误：
     sudo groupadd docker
