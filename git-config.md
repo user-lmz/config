@@ -53,3 +53,32 @@ ssh-keygen -t rsa -C "mingzeluo888@gmail.com"
 #如果上述指令运行成功，那么会在主目录（home）下生成一个.ssh的隐藏文件夹，按ctrl+h可以显示。
 点击进入后可以找到两个文件，分别为：id_rsa和id_rsa.pub。这两个文件对应了私密密钥和公开密钥，
 接下来就是要将公开密钥文件（即id_rsa.pub文件）中的代码复制到github中的“SSH Key”下面S
+
+
+
+#### 解决Github拒绝授权问题Permission denied, please try again
+
+> 正确生成秘钥并在Github添加公钥后通过以下命令测试SSH
+>
+> ssh -T git@github.com
+> git@github.com's password: 
+> Permission denied, please try again.
+> git@github.com's password: 
+> 输入密码无效；
+>
+> 解决办法：
+>
+> ##### `vim ~/.ssh/config`
+>
+> #添加
+> `Host github.com`
+> `identityFile ~/.ssh/id_rsa#自己的私钥文件名`
+> `Host github.com`
+> `Hostname ssh.github.com`
+> `Port 443`
+> `User git`
+> #再次测试：
+>
+> ssh -T git@github.com
+> Warning: Permanently added the RSA host key for IP address '[18.141.90.153]:443' to the list of known hosts.
+> Hi xxxxx! You've successfully authenticated, but GitHub does not provide shell access.
