@@ -1,0 +1,1 @@
+删除休眠文件 powercfg -h off
