@@ -4,6 +4,7 @@ git init
 #删除缓冲区中的文件
 git rm --cached "文件路径"，不删除物理文件，仅将该文件从缓存中删除；
 git rm --f "文件路径"，不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）；
+git rm -r  --cached  文件夹 //删除文件夹
 
 #git push若出现要输入用户名和密码，则输入（只对该仓库有效，加-g表示全局）
 git config  credential.helper store 
